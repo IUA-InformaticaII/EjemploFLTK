@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.12)
+project(EjemploFLTK)
+
+set(CMAKE_CXX_STANDARD 14)
+
+
+
+FIND_PACKAGE(FLTK REQUIRED)
+FIND_PACKAGE(OpenGL REQUIRED)
+
+
+
+add_executable(EjemploFLTK main.cpp)
+
+TARGET_LINK_LIBRARIES(EjemploFLTK ${FLTK_LIBRARIES})
+TARGET_LINK_LIBRARIES(EjemploFLTK ${OPENGL_LIBRARIES})
